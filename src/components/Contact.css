@@ -1,0 +1,142 @@
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-subtitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #45c7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateX(10px);
+  border-color: #45c7ff;
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(69, 199, 255, 0.5));
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ff6ec4;
+  box-shadow: 0 0 20px rgba(255, 110, 196, 0.3);
+  transform: scale(1.02);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 110, 196, 0.4);
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.5rem;
+  }
+}
+/* Add these styles to your existing Contact.css */
+
+.contact-method a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: #ff6ec4;
+  text-shadow: 0 0 10px rgba(255, 110, 196, 0.5);
+}
