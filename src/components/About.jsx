@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import ketan_pic from '../assets/ketan1.jpg';
+import ketan_pic from '../assets/ketan.png';
 
 const About = () => {
   return (

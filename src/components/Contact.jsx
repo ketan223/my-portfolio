@@ -22,7 +22,9 @@ const Contact = () => {
   setLoading(true);
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com', {
+    //const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com?no-captcha=true', { this is oprignal 
+
+    const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com?no-captcha=true', {  // this is modify 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

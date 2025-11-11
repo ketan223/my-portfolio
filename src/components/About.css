@@ -222,3 +222,16 @@
   z-index: 2;
   transform: scale(1.2); /* Zoom in to fill the circle */
 }
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center;
+  }
+  
+  .image-placeholder {
+    width: 280px !important;
+    height: 280px !important;
+    margin: 0 auto;
+  }
+}

@@ -281,3 +281,14 @@
   width: fit-content;
   margin-top: auto; /* ← Push to bottom */
 }
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem;
+  }
+  
+  .project-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}

@@ -159,5 +159,28 @@ section {
 body {
   padding-top: 80px;
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 12, 41, 0.98);
+    padding: 1rem 0;
+    gap: 0;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
 
 /* Rest of your existing App.css styles remain the same */
