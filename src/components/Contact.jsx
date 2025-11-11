@@ -18,32 +18,30 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    setLoading(true);
 
-  try {
-    //const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com?no-captcha=true', { this is oprignal 
+    try {
+      const response = await fetch('https://getform.io/f/amdyngkb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com?no-captcha=true', {  // this is modify 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    } else {
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
       alert('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    alert('Failed to send message. Please try again.');
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   // Success message
   if (submitted) {
@@ -85,22 +83,23 @@ const Contact = () => {
               </div>
               <div className="contact-method">
                 <div className="method-icon">📍</div>
-               <span>Based in Mumbai, India</span>
+                <span>Based in Mumbai, India</span>
               </div>
               <div className="contact-method">
                 <div className="method-icon">💼</div>
                 <a href="https://www.linkedin.com/in/ketan-tiwari-160873316" target="_blank" rel="noopener noreferrer">
-                                    LinkedIn Profile</a>
+                  LinkedIn Profile
+                </a>
               </div>
               <div className="contact-method">
                 <div className="method-icon">⚡</div>
-               <a 
-  href="https://github.com/ketan223" 
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  GitHub Profile
-</a>
+                <a 
+                  href="https://github.com/ketan223" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profile
+                </a>
               </div>
             </div>
           </div>
