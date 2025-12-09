@@ -77,10 +77,7 @@ const Contact = () => {
                 <div className="method-icon">💌</div>
                 <span>tiwariketan045@gmail.com</span>
               </div>
-              <div className="contact-method">
-                <div className="method-icon">📱</div>
-                <span>+91-9769997106</span>
-              </div>
+              
               <div className="contact-method">
                 <div className="method-icon">📍</div>
                 <span>Based in Mumbai, India</span>
