@@ -40,17 +40,18 @@ const Projects = () => {
         gradient: "gradient-2"
       },
       {
+        title: "TalentIQ",
+        description: " A comprehensive MERN interview platform featuring real-time video conferencing, an integrated Monaco code editor, and a sandboxed code execution engine.",
+        tech: ["React", "Node.js", "Express.js", "MongoDB", "Clerk", "Stream SDK", "Inngest"],
+        gradient: "gradient-3"
+      },
+      {
         title: "StreamBackend", 
         description: "Developed a secure backend for a YouTube-like platform with user authentication, video management, and interactive features.",
         tech: ["Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
         gradient: "gradient-3"
-      },
-      {
-        title: "MERN Auth System",
-        description: "A complete authentication system with login, registration, and secure user sessions.",
-        tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-        gradient: "gradient-1"
       }
+       
     ]
   };
 
