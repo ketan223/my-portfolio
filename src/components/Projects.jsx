@@ -39,12 +39,12 @@ const Projects = () => {
         tech: ["Java", "SQL", "MySQL Driver", "XAMPP"],
         gradient: "gradient-2"
       },
-      {
-        title: "TalentIQ",
-        description: " A comprehensive MERN interview platform featuring real-time video conferencing, an integrated Monaco code editor, and a sandboxed code execution engine.",
-        tech: ["React", "Node.js", "Express.js", "MongoDB", "Clerk", "Stream SDK", "Inngest"],
-        gradient: "gradient-3"
-      },
+     {
+       title: "Streamify",
+       description: "A production-grade language exchange platform featuring real-time chat with message threads, 4K video conferencing with screen sharing, and a dynamic multi-theme UI system.",
+       tech: ["React", "Node.js", "Express.js", "MongoDB", "Stream SDK", "Cloudinary", "Tailwind CSS"],
+       gradient: "gradient-3"
+},
       {
         title: "StreamBackend", 
         description: "Developed a secure backend for a YouTube-like platform with user authentication, video management, and interactive features.",
