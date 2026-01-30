@@ -1,7 +1,7 @@
 import React, { useState } from 'react';  // ← Add useState
 import './Internships.css';
 import ONGCCertificate from '../assets/ONGC.png';
-// import backend from '../assets/download.png';
+import backend from '../assets/download.png';
 
 const Internships = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);  // ← Add state
@@ -20,8 +20,9 @@ const Internships = () => {
       role: "Backend Developer ", 
       duration: "Sep 2025 - Dec 2025",
       description: "Building secure and scalable backend systems with modern technologies.",
-    skills: ["Express.js", "MongoDB", "REST APIs", "Middleware"],
-      // certificate: backend // ← Your second certificate
+    skills: [ "Node.js","Express.js","MongoDB",   "JWT Authentication"]
+,
+       certificate: backend // ← Your second certificate
     }
   ];
   
