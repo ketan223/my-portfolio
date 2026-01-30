@@ -20,17 +20,19 @@ const Projects = () => {
         ]
       },
      {
-  title: " Sapphire MERN Stack Development", 
-  description: "Backend development role focusing on the MERN stack - MongoDB, Express.js  and Node.js for full-stack applications.",
-  tech: ["MongoDB", "Express.js", "Node.js", "REST APIs", "JWT", "Mongoose"],
+  
+  title: "ToggleNest",
+  description: "Worked on backend development and frontend integration using the MERN stack, focusing on API development, database connectivity, and secure authentication.",
+  tech: ["MongoDB", "Express.js", "Node.js",   "JWT", "Mongoose"],
   gradient: "gradient-2",
   features: [
-    "Backend Architecture: Designing and implementing server-side logic",
-    "Database Management: Working with MongoDB for data storage and retrieval",
-    "API Integration: Creating endpoints for frontend communication", 
-    "Security Implementation: Adding authentication and data validation layers"
+    "Backend API Development using Express and Node.js",
+    "MongoDB database design and integration using Mongoose",
+    "Authentication and authorization using JWT",
+    "Frontend and backend integration through REST APIs"
   ]
 }
+
     ],
     personal: [
       {
