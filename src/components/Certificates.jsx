@@ -12,21 +12,21 @@ const Certificates = () => {
     {
       title: "Java Programming",
    
-      date: "2024",
+      date: "2024-25",
       description: "Certified in Java programming fundamentals and advanced concepts",
       skills: ["Java", "OOP", "Data Structures", "Algorithms"],
       image: Java
     },
     {
   title: "MERN Stack",
-  date: "2025",
+  date: "2025-26",
   description: "Certified in full-stack web development using MongoDB, Express, React, and Node.js",
   skills: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "JWT", "Mongoose"],
   image: mern
 },
 {
   title: "Machine Learning",
-  date: "2026",
+  date: "2025-26",
   description: "Certified in machine learning concepts including data preprocessing, model building, and evaluation",
   skills: ["Python", "Pandas", "Scikit-learn", "Data Preprocessing", "Model Training"],
   image: ml

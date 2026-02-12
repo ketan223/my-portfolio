@@ -46,13 +46,14 @@ const Projects = () => {
        description: "A production-grade language exchange platform featuring real-time chat with message threads, 4K video conferencing with screen sharing, and a dynamic multi-theme UI system.",
        tech: ["React", "Node.js", "Express.js", "MongoDB", "Stream SDK", "Cloudinary", "Tailwind CSS"],
        gradient: "gradient-3"
-},
-      {
-        title: "StreamBackend", 
-        description: "Developed a secure backend for a YouTube-like platform with user authentication, video management, and interactive features.",
-        tech: ["Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"],
-        gradient: "gradient-3"
+     },
+     {
+       title: "Smart Mail Classifier",
+       description: "Developed an end-to-end automated email analysis system that fetches real emails, processes text using NLP techniques, and classifies messages as spam or non-spam using a machine learning model with a simple web interface.",
+       tech: ["Python", "Machine Learning", "NLP", "Scikit-learn", "IMAP / Email API", "HTML", "CSS"],
+       gradient: "gradient-3"
       }
+
        
     ]
   };
