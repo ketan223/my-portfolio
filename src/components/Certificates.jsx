@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Certificates.css';
 import Java from '../assets/JAVA.jpg';
 import C from '../assets/C.jpg';
+import mern from '../assets/MERN.png';
+import ml from '../assets/ML.png';
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -16,13 +18,20 @@ const Certificates = () => {
       image: Java
     },
     {
-      title: "C Programming", 
-      
-      date: "2024",
-      description: "Certified in C programming language and system programming",
-      skills: ["C Language", "Pointers", "Memory Management", "System Programming"],
-      image: C
-    }
+  title: "MERN Stack",
+  date: "2025",
+  description: "Certified in full-stack web development using MongoDB, Express, React, and Node.js",
+  skills: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "JWT", "Mongoose"],
+  image: mern
+},
+{
+  title: "Machine Learning",
+  date: "2026",
+  description: "Certified in machine learning concepts including data preprocessing, model building, and evaluation",
+  skills: ["Python", "Pandas", "Scikit-learn", "Data Preprocessing", "Model Training"],
+  image: ml
+}
+
   ];
 
   const openCertificate = (certificate) => {
