@@ -66,8 +66,8 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
@@ -167,17 +167,13 @@
     gap: 2rem;
   }
   
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .section-title {
     font-size: 2.5rem;
   }
   
   .image-placeholder {
-    width: 300px;  /* Smaller on mobile */
-    height: 300px;
+    width: min(300px, 85vw);
+    height: min(300px, 85vw);
   }
 }
 .about-image {
@@ -230,8 +226,8 @@
   }
   
   .image-placeholder {
-    width: 280px !important;
-    height: 280px !important;
+    width: min(280px, 80vw) !important;
+    height: min(280px, 80vw) !important;
     margin: 0 auto;
   }
 }

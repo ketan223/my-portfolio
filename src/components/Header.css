@@ -1,5 +1,5 @@
 .header {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,10 +14,10 @@
 }
 
 .sexy-main-text {
-  font-size: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(2.2rem, 6vw, 5.5rem);
   font-weight: 900;
   margin-bottom: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .text-gradient {
@@ -46,11 +46,13 @@
 }
 
 .sexy-tagline {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   margin-bottom: 3rem;
   opacity: 0.9;
   font-weight: 300;
   letter-spacing: 2px;
+  line-height: 1.5;
+  padding: 0 1rem;
 }
 
 .header-buttons {
@@ -125,6 +127,10 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    min-height: calc(100vh - 70px);
+  }
+
   .header-buttons {
     flex-direction: column;
     align-items: center;

@@ -212,3 +212,15 @@
 .image-overlay {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .close-btn {
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.2rem !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
