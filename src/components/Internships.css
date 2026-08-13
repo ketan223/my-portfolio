@@ -1,0 +1,215 @@
+.internships-section {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.internships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.internship-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.internship-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff6ec4;
+  box-shadow: 0 15px 30px rgba(255, 110, 196, 0.2);
+}
+
+.internship-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.internship-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.internship-card:hover .internship-img {
+  transform: scale(1.1);
+}
+
+.internship-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.internship-card:hover .internship-overlay {
+  opacity: 1;
+}
+
+.view-internship {
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.internship-card:hover .view-internship {
+  transform: translateY(0);
+}
+
+.internship-content {
+  padding: 1.5rem;
+}
+
+.internship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #fff, #45c7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.internship-duration {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.internship-role {
+  font-size: 1.1rem;
+  color: #ff6ec4;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.internship-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.internship-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: #ff6ec4;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .internships-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .internship-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .internship-image {
+    height: 180px;
+  }
+}
+/* Certificate Modal Styles */
+/* Certificate Modal Styles */
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: relative;
+  max-width: 800px; /* ← LIMIT THE WIDTH */
+  width: 90%; /* ← RESPONSIVE */
+  max-height: 90vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex; /* ← ADD FLEX */
+  flex-direction: column; /* ← ADD COLUMN */
+  align-items: center; /* ← CENTER CONTENT */
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid white;
+  z-index: 10001;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+.certificate-full-image {
+  max-width: 100%; /* ← WILL RESPECT PARENT WIDTH */
+  max-height: 70vh; /* ← ADJUSTED HEIGHT */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
