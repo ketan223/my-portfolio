@@ -159,43 +159,62 @@ section {
 body {
   padding-top: 80px;
 }
-@media (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: rgba(15, 12, 41, 0.98);
-    padding: 1rem 0;
-    gap: 0;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  * {
+    cursor: auto !important;
   }
-  
-  .nav-item {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav-link {
-    display: block;
-    padding: 1rem;
-    border-radius: 0;
+  .cursor-glow {
+    display: none !important;
   }
 }
+
 @media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(15, 12, 41, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 1rem 0;
-  }
-  
-  /* Add padding to body to account for fixed navbar */
   body {
     padding-top: 70px;
+  }
+
+  .navbar {
+    padding: 0.8rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #ff6ec4;
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #7873f5;
   }
   
   .nav-menu {
@@ -205,13 +224,30 @@ body {
     left: 0;
     width: 100%;
     background: rgba(15, 12, 41, 0.98);
-    padding: 1rem 0;
-    display: none; /* Hidden by default */
+    backdrop-filter: blur(20px);
+    padding: 1.5rem 0;
+    gap: 1rem;
+    display: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  /* Show menu when active */
   .nav-menu.active {
     display: flex;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    width: 80%;
+  }
+
+  section {
+    padding: 60px 1.5rem !important;
   }
 }
 

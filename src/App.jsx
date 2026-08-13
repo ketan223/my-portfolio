@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeSection, setActiveSection] = useState('home');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -26,6 +27,7 @@ const App = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
+      setMenuOpen(false);
     }
   };
 
@@ -55,7 +57,14 @@ const App = () => {
           <div className="nav-logo">
             <span className="logo-text">Ketan</span>
           </div>
-          <ul className="nav-menu">
+          
+          <button className={`menu-toggle ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Navigation Menu">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+
+          <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
             <li className="nav-item">
               <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} onClick={() => scrollToSection('home')}>Home</a>
             </li>
