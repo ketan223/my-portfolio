@@ -1,16 +1,96 @@
-# React + Vite
+# Ketan Tiwari — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for **Ketan DilipKumar Tiwari**, a full-stack developer interested in machine learning, deep learning, and generative AI. The site brings together my background, technical skills, internship experience, projects, certificates, and contact details in one place.
 
-Currently, two official plugins are available:
+💻 **Source code:** [github.com/ketan223/my-portfolio](https://github.com/ketan223/my-portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Highlights
 
-## React Compiler
+- Responsive single-page experience with smooth section navigation
+- About and skills sections
+- Internship experience with certificate previews
+- Filterable personal and internship project showcases
+- Certificate gallery
+- Contact form, email, GitHub, and LinkedIn links
+- Animated hero, mobile navigation, and interactive visual details
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built with
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/)
+- [Vite](https://vite.dev/)
+- JavaScript and CSS
+- [FormSubmit](https://formsubmit.co/) for contact form submissions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Featured work
+
+The portfolio highlights projects such as:
+
+- **AI Interview Prep & Resume Analytics** — interview practice, AI-generated questions and feedback, and PDF resume generation.
+- **Text-to-SQL Query Generator** — natural-language database queries with exploratory analysis and visualizations.
+- **Online Appointment Booking System** — a MERN application with role-based access, scheduling, notifications, and video calling.
+- **Medical Query Assistant** — a document-based RAG assistant built with LangChain and Gemini.
+- **Streamify** — a language exchange platform with real-time chat and video.
+- **ApplyPilot** — AI-assisted job outreach and recruiter response classification.
+
+## Run locally
+
+### Prerequisites
+
+- Node.js (LTS recommended)
+- npm
+
+### Setup
+
+```bash
+git clone https://github.com/ketan223/my-portfolio.git
+cd my-portfolio
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite (typically `http://localhost:5173`).
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local Vite development server |
+| `npm run build` | Create an optimized production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint across the project |
+
+## Project structure
+
+```text
+src/
+├── assets/                 # Profile, internship, and project images
+├── components/
+│   ├── About.jsx
+│   ├── Certificates.jsx
+│   ├── Contact.jsx
+│   ├── Header.jsx
+│   ├── Internships.jsx
+│   ├── Projects.jsx
+│   └── Skills.jsx
+├── App.jsx                 # Page layout and section navigation
+└── main.jsx                # Application entry point
+```
+
+## Production build
+
+Build the static site with:
+
+```bash
+npm run build
+```
+
+The generated files are written to `dist/`. Deploy that directory to any static host that supports single-page Vite applications. To test the production build locally, run `npm run preview`.
+
+## Contact
+
+- **LinkedIn:** [linkedin.com/in/ketan-tiwari-160873316](https://www.linkedin.com/in/ketan-tiwari-160873316)
+- **GitHub:** [github.com/ketan223](https://github.com/ketan223)
+
+---
+
+© Ketan Tiwari
