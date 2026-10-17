@@ -160,6 +160,10 @@ const App = () => {
       <Projects />
       <Certificates />
       <Contact />
+      <footer className="copyright-footer">
+        <p>© {new Date().getFullYear()} Ketan Tiwari. All Rights Reserved.</p>
+        <p>Designed &amp; Developed by Ketan Tiwari</p>
+      </footer>
     </div>
   );
 };
