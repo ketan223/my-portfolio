@@ -2,6 +2,7 @@ import React, { useState } from 'react';  // ← Add useState
 import './Internships.css';
 import ONGCCertificate from '../assets/ONGC.png';
 import backend from '../assets/download.png';
+import haliburton from '../assets/Haliburton.png'
 
 const Internships = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);  // ← Add state
@@ -23,7 +24,15 @@ const Internships = () => {
     skills: [ "Node.js","Express.js","MongoDB",   "JWT Authentication"]
 ,
        certificate: backend // ← Your second certificate
-    }
+    },
+    {
+  company: "Halliburton",
+  role: "Generative AI Intern",
+  duration: "June 2025 - July 2025",
+  description: "Developed an Intelligent Offline Chatbot for OpenWorks as part of the internship project at Halliburton.",
+  skills: ["Generative AI", "Python", "LLMs", "Chatbot Development"],
+  certificate: haliburton
+}
   ];
   
 

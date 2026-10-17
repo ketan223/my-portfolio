@@ -14,6 +14,7 @@ const Skills = () => {
       "Deep Learning",
       "Generative AI",
       "Large Language Models (LLMs)",
+      "Agentic Ai        ",
       "Retrieval-Augmented Generation (RAG)",
       "Natural Language Processing (NLP)"
     ]

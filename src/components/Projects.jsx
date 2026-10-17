@@ -31,7 +31,32 @@ const Projects = () => {
     "Authentication and authorization using JWT",
     "Frontend and backend integration through REST APIs"
   ]
+},
+
+{
+  title: "Natural Language Prompt to SQL Query Generator",
+  description: "Developed an AI-powered Text-to-SQL chatbot that converts natural language prompts into SQL queries, executes database operations, and generates actionable insights through statistical analysis, exploratory data analysis, and interactive visualizations.",
+  tech: [
+    "Python",
+    "LLMs",
+    "SQL",
+    "NLP",
+    "Pandas",
+    "EDA",
+    "Machine Learning",
+    "Data Visualization"
+  ],
+  gradient: "gradient-2",
+  features: [
+    "Natural Language to SQL: Converts user prompts into SQL queries using Large Language Models, enabling users to interact with databases without writing SQL manually.",
+    "Database Query Execution: Executes generated SQL queries to retrieve relevant data and supports structured data analysis.",
+    "Exploratory Data Analysis: Performs EDA and statistical analysis on query results to identify patterns, trends, and meaningful insights.",
+    "Interactive Visualizations: Generates visual representations of query results through charts and graphs for easier interpretation.",
+    "Query Performance Evaluation: Evaluates model performance using metrics such as F1-score and recall, where applicable.",
+    "Prediction Error Analysis: Uses MSE and RMSE where applicable to evaluate numerical prediction tasks."
+  ]
 }
+
 
     ],
    personal: [
@@ -112,7 +137,23 @@ const Projects = () => {
       "Tailwind CSS"
     ],
     gradient: "gradient-3"
-  }
+  },
+  {
+  title: "ApplyPilot — AI Job Application Automation",
+  description:
+    "An AI-powered job outreach platform that discovers relevant companies and recruiter contacts, validates email deliverability, automates personalized application emails, and classifies recruiter responses into actionable leads.",
+  tech: [
+    "Node.js",
+    "Express.js",
+    "LLM Agents",
+    "NLP Classification",
+    "REST APIs",
+    "Email Automation",
+    "IMAP",
+    "DNS Validation"
+  ],
+  gradient: "gradient-1"
+}
 ]
   };
 
