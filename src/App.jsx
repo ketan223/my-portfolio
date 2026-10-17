@@ -8,9 +8,16 @@ import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 
+const sectionIds = ['home', 'about', 'skills', 'internships', 'projects', 'certificates', 'contact'];
+
+const getSectionFromHash = () => {
+  const sectionId = window.location.hash.slice(1);
+  return sectionIds.includes(sectionId) ? sectionId : 'home';
+};
+
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState(getSectionFromHash);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -20,6 +27,62 @@ const App = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    let animationFrameId;
+
+    const updateActiveSection = () => {
+      animationFrameId = undefined;
+
+      const navbarHeight = document.querySelector('.navbar')?.getBoundingClientRect().height ?? 0;
+      const activationPoint = window.scrollY + navbarHeight + 1;
+      let currentSection = sectionIds[0];
+
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+        if (section && section.getBoundingClientRect().top + window.scrollY <= activationPoint) {
+          currentSection = sectionId;
+        }
+      }
+
+      const isAtPageBottom =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+      if (isAtPageBottom) {
+        currentSection = sectionIds[sectionIds.length - 1];
+      }
+
+      setActiveSection((previousSection) =>
+        previousSection === currentSection ? previousSection : currentSection
+      );
+    };
+
+    const scheduleActiveSectionUpdate = () => {
+      if (animationFrameId === undefined) {
+        animationFrameId = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    const handleHashChange = () => {
+      setActiveSection(getSectionFromHash());
+      scheduleActiveSectionUpdate();
+    };
+
+    window.addEventListener('scroll', scheduleActiveSectionUpdate, { passive: true });
+    window.addEventListener('resize', scheduleActiveSectionUpdate);
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+    scheduleActiveSectionUpdate();
+
+    return () => {
+      window.removeEventListener('scroll', scheduleActiveSectionUpdate);
+      window.removeEventListener('resize', scheduleActiveSectionUpdate);
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+      if (animationFrameId !== undefined) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId) => {
