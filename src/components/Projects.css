@@ -291,3 +291,27 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 380px) {
+  .projects-tabs {
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .tab-btn {
+    flex: 1 1 140px;
+    min-width: 0;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: clamp(1.25rem, 6vw, 1.5rem);
+    overflow-wrap: anywhere;
+  }
+}
