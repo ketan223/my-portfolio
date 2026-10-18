@@ -58,6 +58,8 @@ const Internships = () => {
                   src={internship.certificate} 
                   alt={`${internship.company} Internship Certificate`}
                   className="internship-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div 
                   className="internship-overlay"

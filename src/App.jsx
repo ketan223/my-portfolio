@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
@@ -16,17 +16,39 @@ const getSectionFromHash = () => {
 };
 
 const App = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const cursorGlowRef = useRef(null);
   const [activeSection, setActiveSection] = useState(getSectionFromHash);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    let animationFrameId;
+    let mouseX = 0;
+    let mouseY = 0;
+
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (animationFrameId !== undefined) {
+        return;
+      }
+
+      animationFrameId = window.requestAnimationFrame(() => {
+        animationFrameId = undefined;
+        if (cursorGlowRef.current) {
+          cursorGlowRef.current.style.transform =
+            `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+        }
+      });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (animationFrameId !== undefined) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -97,19 +119,15 @@ const App = () => {
   return (
     <div className="app">
       <div 
+        ref={cursorGlowRef}
         className="cursor-glow"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`
-        }}
       ></div>
       
       <div className="floating-particles">
         {[...Array(15)].map((_, i) => (
           <div key={i} className="particle" style={{
-            '--i': i,
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 20}s`
+            left: `${(i * 37 + 11) % 100}%`,
+            animationDelay: `${-((i * 7) % 20)}s`
           }}></div>
         ))}
       </div>

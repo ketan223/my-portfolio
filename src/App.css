@@ -19,6 +19,8 @@ body {
 
 .cursor-glow {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
   background: radial-gradient(circle, #ff6ec4 0%, transparent 70%);
@@ -28,7 +30,7 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0.7;
   mix-blend-mode: screen;
-  transition: all 0.05s ease;
+  will-change: transform;
 }
 
 .floating-particles {

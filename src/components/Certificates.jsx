@@ -55,6 +55,8 @@ const Certificates = () => {
                   src={cert.image} 
                   alt={`${cert.title} Certificate`}
                   className="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div 
                   className="image-overlay"
